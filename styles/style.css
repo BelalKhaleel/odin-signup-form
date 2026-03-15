@@ -25,48 +25,43 @@ html {
   --padding-left: 28px;
 }
 
-body {
-  background-color: rgb(14, 14, 14);
-}
-
 .wrapper {
   display: flex;
-  background-color: white;
-  max-width: min(80%, 840px);
   min-height: 100vh;
-  margin: 0 auto;
 }
 
 aside {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   position: relative;
-  flex-basis: 314px;
+  flex-basis: 35%;
   background-image: url(/assets/images/halie-west-25xggax4bSA-unsplash.jpg);
   background-size: cover;
-  font-family: sans-serif;
-  color: rgb(232,234,228, .9);
   text-align: center;
+  color: white;
 }
 
 aside > div {
   position: absolute;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  top: 126px;
-  height: 90px;
+  top: 205px;
   width: 100%;
   background-color: rgb(14, 14, 14, .4);
-  color: #fff;
   font-family: "Norse", sans-serif;
-  font-size: 3.5rem;
+  font-size: 6rem;
 }
 
-aside > span {
-  position: absolute;
-  bottom: 7px;
-  left: 100px;
-  font-size: .5rem;
+aside > p {
+  font-family: sans-serif;
+  font-size: .9rem;
+  margin-bottom: 10px;
+}
+
+aside > p a {
+  color: white;
 }
 
 main {
