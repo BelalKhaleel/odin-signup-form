@@ -1,12 +1,20 @@
 @font-face {
-  font-family: Norse-Bold;
-  src: url(./assets/fonts/norse-bold/Norse-Bold/Norse-Bold.woff) format("woff");
+    font-family: 'Norse';
+    src: url('../assets/fonts/transfonter.org-20260315-033134/Norse-Bold.woff2') format('woff2'),
+        url('../assets/fonts/transfonter.org-20260315-033134/Norse-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -50,7 +58,7 @@ aside > div {
   width: 100%;
   background-color: rgb(14, 14, 14, .4);
   color: #fff;
-  font-family: Norse-Bold, sans-serif;
+  font-family: "Norse", sans-serif;
   font-size: 3.5rem;
 }
 
