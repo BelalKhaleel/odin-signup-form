@@ -1,10 +1,13 @@
 @font-face {
-    font-family: 'Norse';
-    src: url('../assets/fonts/transfonter.org-20260315-033134/Norse-Bold.woff2') format('woff2'),
-        url('../assets/fonts/transfonter.org-20260315-033134/Norse-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Norse";
+  src:
+    url("../assets/fonts/transfonter.org-20260315-033134/Norse-Bold.woff2")
+      format("woff2"),
+    url("../assets/fonts/transfonter.org-20260315-033134/Norse-Bold.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 html {
@@ -20,22 +23,23 @@ html {
 }
 
 :root {
-  --btn-color: #596D48;
-  --input-border: #E5E7EB;
-  --padding-left: 28px;
+  --btn-color: #596d48;
+  --invalid-input-border: #ba311d;
+  --padding-left: 2.5rem;
 }
 
 .wrapper {
   display: flex;
   min-height: 100vh;
+  background-color: #f9fafb;
 }
 
 aside {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  flex-basis: 35%;
   background-image: url(/assets/images/halie-west-25xggax4bSA-unsplash.jpg);
   background-size: cover;
   text-align: center;
@@ -49,14 +53,14 @@ aside > div {
   justify-content: center;
   top: 205px;
   width: 100%;
-  background-color: rgb(14, 14, 14, .4);
+  background-color: rgb(14, 14, 14, 0.4);
   font-family: "Norse", sans-serif;
   font-size: 6rem;
 }
 
 aside > p {
   font-family: sans-serif;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-bottom: 10px;
 }
 
@@ -65,69 +69,60 @@ aside > p a {
 }
 
 main {
-  flex-grow: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-family: sans-serif;
 }
 
 .top-section {
-  width: 100%;
-  height: 216px;
-  background-color: #f9fafb;
   font-weight: bold;
+  font-size: 1.4rem;
+  padding-left: var(--padding-left);
+  padding-bottom: 3rem;
 }
 
 .top-section p {
-  padding: 102px 0 36px 30px;
-  padding-left: var(--padding-left);
   width: 55ch;
-  font-size: .9rem;
-  letter-spacing: -.5px;
 }
 
 .form-section {
-  position: relative;
-  width: 100%;
-  height: 177px;
+  padding: 1rem 25rem 1rem var(--padding-left);
   background-color: #fff;
-  padding-left: var(--padding-left);
-  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-}
-
-.form-section > span {
-  display: block;
-  padding-top: 15px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 15px 10px -10px;
 }
 
 fieldset {
-  font-size: 0.6rem;
-  letter-spacing: 0.09rem;
-  padding: 0;
-  display: flex;
-  gap: 42px;
   border: none;
-  margin-bottom: 15px;
+  padding: 0;
 }
 
-fieldset:last-child {
-  margin-bottom: 23px;
+fieldset legend {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+fieldset ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 1rem 0;
+  letter-spacing: 0.09rem;
+  list-style: none;
 }
 
 fieldset label {
   display: block;
-  font-size: .4rem;
-  font-weight: bold;
+  font-size: 0.7rem;
 }
 
 input {
-  border: solid 1px var(--input-border);
-  border-radius: 2px;
-  padding: 2px;
-  padding-left: 5px;
+  min-width: 250px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 8px;
 }
 
 input:focus {
@@ -136,60 +131,37 @@ input:focus {
   box-shadow: rgba(0, 0, 0, 0.24) 1px 2px 4px;
 }
 
-div.error-message > span {
-  display: block;
-  color: #ce6161;
-  font-size: .3rem;
-  letter-spacing: 0;
-  font-weight: bold;
-}
-
-.hidden {
-  display: none;
+input[type="password"]:invalid {
+  border: 1px solid var(--invalid-input-border);
 }
 
 .bottom-section {
-  width: 100%;
-  background-color: #f9fafb;
-  flex: 1;
-  padding-left: var(--padding-left);
   font-weight: bold;
+  padding-top: 2rem;
+  padding-left: var(--padding-left);
 }
 
-input[type='button'] {
-  width: 137px;
-  height: 30px;
+.bottom-section button {
+  color: #fff;
   background-color: var(--btn-color);
-  font-size: .7rem;
-  margin-top: 20px;
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
   border-radius: 5px;
-  border-color: var(--btn-color);
+  border: none;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-input[type='button']::placeholder {
-  color: white;
+.bottom-section p {
+  margin-top: 2rem;
 }
 
-.button {
-  position: relative;
-}
-
-.button > span {
-  color: white;
-  position: absolute;
-  font-size: .6rem;
-  left: 30px;
-  bottom: 13px;
-}
-.bottom-section > span {
-  display: block;
-  font-size: .6rem;
-  margin-top: 20px;
-}
-
-.bottom-section > span > a {
+.bottom-section p a {
+  text-decoration: none;
   color: var(--btn-color);
-  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  aside {
+    display: none;
+  }
 }
