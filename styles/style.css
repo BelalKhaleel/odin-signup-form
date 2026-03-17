@@ -81,6 +81,9 @@ main {
   font-size: 1.4rem;
   padding-left: var(--padding-left);
   padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .top-section p {
@@ -88,7 +91,7 @@ main {
 }
 
 .form-section {
-  padding: 1rem 25rem 1rem var(--padding-left);
+  padding: 1rem var(--padding-left);
   background-color: #fff;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 15px 10px -10px;
 }
@@ -96,6 +99,7 @@ main {
 fieldset {
   border: none;
   padding: 0;
+  max-width: 70%;
 }
 
 fieldset legend {
@@ -103,22 +107,26 @@ fieldset legend {
   font-weight: bold;
 }
 
-fieldset ul {
+fieldset:not(legend) {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   padding: 1rem 0;
   letter-spacing: 0.09rem;
-  list-style: none;
+}
+
+fieldset div {
+  margin-right: 2rem;
 }
 
 fieldset label {
   display: block;
   font-size: 0.7rem;
+  margin-bottom: 2px;
 }
 
 input {
-  min-width: 250px;
+  min-width: 240px;
   border: 1px solid #e5e7eb;
   border-radius: 5px;
   padding: 5px;
@@ -139,20 +147,20 @@ input[type="password"]:invalid {
   font-weight: bold;
   padding-top: 2rem;
   padding-left: var(--padding-left);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .bottom-section button {
+  width: fit-content;
   color: #fff;
   background-color: var(--btn-color);
   font-size: 1.2rem;
-  padding: 0.5rem 2rem;
+  padding: 0.7rem 2.5rem;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-}
-
-.bottom-section p {
-  margin-top: 2rem;
 }
 
 .bottom-section p a {
